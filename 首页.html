@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+                background: url('campus-bg.jpg') no-repeat center center fixed;
+                background-size: cover;
+                color: #333;
+
+
+                /* 导航栏 */
+                nav {
+                    position: sticky;
+                    top: 0;
+                    background-color: rgba(255, 255, 255, 0.9);
+                    padding: 10px 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                }
+
+                .logo img {
+                    animation: fadeInRotate 2s ease-in-out;
+                    height: 40px;
+                }
+
+                @keyframes fadeInRotate {
+                    0% {
+                        opacity: 0;
+                        transform: rotate(-10deg);
+                    }
+
+                    50% {
+                        opacity: 0.5;
+                        transform: rotate(10deg);
+                    }
+
+                    100% {
+                        opacity: 1;
+                        transform: rotate(0deg);
+                    }
+                }
+
+                .nav-links li {
+                    position: relative;
+                }
+
+                .dropdown {
+                    display: none;
+                    position: absolute;
+                    background-color: #fff;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    z-index: 1;
+                }
+
+                .nav-links li:hover .dropdown {
+                    display: block;
+                }
+
+                /* 主体内容 */
+                .content-container {
+                    padding: 20px;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                    gap: 20px;
+                }
+
+                .module {
+                    background: linear-gradient(to bottom, #fff, #f0f0f0);
+                    padding: 2vw;
+                    border-radius: 1vw;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                }
+
+                .carousel {
+                    height: 20vh;
+                    overflow: hidden;
+                    position: relative;
+                }
+
+                .carousel-item {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    transition: transform 0.3s;
+                }
+
+                .carousel-item img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .carousel-item.active {
+                    display: block;
+                }
+
+                .carousel-item:not(.active) {
+                    display: none;
+                }
+
+                .carousel-item:hover {
+                    transform: scale(1.05);
+                }
+
+            
+        </style>
+
+    </head>
+
+    <body>
+        <nav>
+            <div class="logo">
+                <img src="campus-logo.png" alt="校园LOGO" style="height: 40px;">
+            </div>
+            <ul>
+                <li><a href="个人中心.html">个人中心</a></li>
+                <li><a href="校园活动.html">校园活动</a></li>
+                <li><a href="课程信息.html">课程信息</a></li>
+            </ul>
+        </nav>
+
+        <!-- 主体内容 -->
+        <div class="content-container">
+            <!-- 模块一：校园新闻 -->
+            <div class="module">
+                <h2>校园新闻</h2>
+                <p>最新校园动态和通知公告。</p>
+            </div>
+
+            <!-- 模块二：课程推荐 -->
+            <div class="module">
+                <h2>课程推荐</h2>
+                <ul>
+                    <li>《HTML+CSS》 - 人民邮电出版社</li>
+                    <li>《JavaScript》 - 清华大学出版社</li>
+                    <li>《C++》 - San Francisco 出版社</li>
+                </ul>
+            </div>
+
+            <!-- 模块三：活动专区 -->
+            <div class="module">
+                <h2>活动专区</h2>
+                <p>即将举行的校园活动和报名入口。</p>
+            </div>
+
+            <!-- 模块四：论坛交流 -->
+            <div class="module">
+                <h2>论坛交流</h2>
+                <ul>
+                    <li>【真虾头！】暴雨过后路边花圃出现巨型小龙虾。。。。的头！</li>
+                    <li>【天呐！】这门课程怎么这么有趣！</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 版权信息 -->
+        <footer style="text-align: center; padding: 10px; background-color: rgba(255, 255, 255, 0.9);">
+            Copyright &copy; 2025
+        </footer>
+
+
+    </body>
+
+</html>
